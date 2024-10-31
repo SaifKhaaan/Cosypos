@@ -1,0 +1,203 @@
+body {
+    margin: 0;
+    background-color: #2b2b2b;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #1a1a1a;
+    padding: 20px;
+    color: #fff;
+    position: fixed;
+}
+
+.sidebar .logo {
+    display: flex;
+    align-items: left;
+    margin-bottom: 40px;
+    padding-left: 50px;
+}
+
+.sidebar .logo i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.sidebar .logo span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sidebar .menu-item {
+    margin: 20px 0;
+    font-size: 16px;
+    color: #b3b3b3;
+    padding: 10px 10px 10px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar .menu-item:hover {
+    background-color: rgb(45, 45, 45);
+}
+
+.sidebar .menu-item.active {
+    background-color: #333;
+    color: #fff;
+}
+
+.sidebar .user-list {
+    margin-top: 40px;
+    /* padding-left: 20px; */
+}
+
+.sidebar .user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.sidebar .user .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.sidebar .user .name {
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+.sidebar .footer {
+    position: absolute;
+    bottom: 20px;
+    font-size: 12px;
+    color: #666;
+    padding-left: 50px;
+}
+
+.sidebar{
+text-align: left;}
+
+
+
+
+
+  .user-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .user {
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      border: 2px solid rgb(68, 69, 71);
+      border-radius: 20px;
+      padding: 5px 10px;
+      gap: 10px;
+  }
+
+  .user .avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      font-weight: bold;
+  }
+
+  .user .avatar.leslie {
+      background-color: #b3b3ff;
+      color: #333;
+  }
+
+  .user .avatar.cameron {
+      background-color: #ccffcc;
+      color: #333;
+  }
+
+  .user .avatar.jacob {
+      background-color: #ffcccc;
+      color: #333;
+  }
+
+
+  .footer{
+    margin-bottom: 30px;
+  }
+
+
+  .user ,.menu-item{
+        transition: transform 0.3s ease-in-out;
+  }
+
+
+        .menu-item:hover{
+
+        transform: scale(1.1);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        font: bold;
+    
+        } 
+
+
+        .user:hover {
+        
+            transform: scale(1.1);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        
+        }
+
+                  @media (min-width: 100px) and (max-width: 1600px) {
+                    .footer{
+                        margin-left: -50px;
+                    }}
+
+
+/*  development purpose */
+
+.dev-btn {
+        background: #01f968;
+        width: 150px;
+        border-radius: 20px;
+        height: 50px;
+        font-weight: bold;
+        font-size: 20px;
+        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    }
+
+    .dev-btn:hover {
+        transform: scale(1.2);
+        /* Adjust the scale factor as needed */
+        background-color: #00d95a;
+    }
+
+
+    .menu-item a{
+        text-decoration: none;
+    color: #666;      }
+
+          .menu-item:hover,
+          .menu-item:active {
+              color: white;
+          }
+
+    a{
+    padding: 10px 10px 10px ;    }
+
+    .sidebar-items{
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 70px;
+    }

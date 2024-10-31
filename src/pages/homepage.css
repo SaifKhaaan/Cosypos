@@ -1,0 +1,65 @@
+.homepage {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    
+    margin: 0;
+    padding: 0;
+    background: rgb(28, 28, 28);
+    
+}
+
+@media (max-width: 768px) {
+    body {
+
+
+        h1 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+.order-details-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.homepagecenter {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: -100px;
+}
+
+.homepage-right-side-order-details {
+    width: 100%;
+}
+
+
+
+/* odsjfsjlfjsef */
+
+.homepage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.homepagecenter {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+ 
+}
+
+

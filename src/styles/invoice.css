@@ -1,0 +1,21 @@
+/* invoice.css */
+
+.invoice-container {
+    width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.invoice-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.invoice-details {
+    margin-bottom: 20px;
+}
+
+.invoice-summary {
+    margin-top: 20px;
+}

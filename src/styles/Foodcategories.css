@@ -1,0 +1,204 @@
+  .food-categories-body {
+      background-color: #1c1c1c;
+      font-family: Roboto, sans-serif;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: fit-content;
+            transform: translateX(38%);
+                        padding-bottom: 15px;
+                        padding-top: 10px;
+  }
+
+  .food-categories-search-bar {
+      width: 300px;
+      margin-bottom: 20px;
+        align-items: start;
+align-items: start;
+      position: relative;
+  }
+
+  .food-categories-search-bar input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #333;
+      color: #fff;
+      padding-left: 35px;
+  }
+
+  .food-categories-search-bar .fa-search {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      color: #888;
+  }
+
+  .food-categories {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      /* Minimum spacing between cards */
+      /* width: 100%; */
+      justify-content: center;
+  }
+
+  .food-category {
+      background-color: #e0e0e0;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: left;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 180px;
+      /* Decreased width */
+      margin: 5px;
+      /* Added margin to reduce spacing */
+        transition: transform 0.3s ease-in-out;
+  }
+
+  .food-category .icon {
+      display: flex;
+      justify-content: flex-start;
+  }
+
+  .food-category .icon i {
+      font-size: 24px;
+  }
+
+  .food-category .details {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-top: auto;
+      padding-top: 40px;
+      /* Added more padding between icon and details */
+  }
+
+  .food-category .name {
+      font-weight: bold;
+  }
+
+  .food-category .items {
+      margin-left: 0;
+  }
+
+  .food-category:nth-child(1) {
+      background-color: #d1e7dd;
+  }
+
+  .food-category:nth-child(2) {
+      background-color: #e2d1e7;
+  }
+
+  .food-category:nth-child(3) {
+      background-color: #d1e7e7;
+  }
+
+  .food-category:nth-child(4) {
+      background-color: #d1d1e7;
+  }
+
+  .food-category:nth-child(5) {
+      background-color: #f7d1e7;
+  }
+
+  .food-category:nth-child(6) {
+      background-color: #e7d1d1;
+  }
+
+  .food-category:nth-child(7) {
+      background-color: #f7e7d1;
+  }
+
+  .food-category:nth-child(8) {
+      background-color: #d1e7d1;
+  }
+
+
+
+
+   .food-category:hover {
+      transform: scale(1.1);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+
+
+
+
+  /* Media query for small screens */
+  @media (max-width: 768px) {
+      .food-categories-body {
+          width: 100%;
+          transform: translateX(0);
+          /* Center on small screens */
+      }
+
+      .food-categories {
+          grid-template-columns: 1fr 1fr;
+          /* Adjust grid columns for smaller screens */
+      }
+  }
+
+  /* Media query for medium screens */
+  @media (min-width: 769px) and (max-width: 1024px) {
+      .food-categories {
+          grid-template-columns: 2fr 2fr;
+          /* Adjust grid columns for medium screens */
+      }
+  }
+
+  /* Media query for large screens */
+  @media (min-width: 1025px) {
+      .food-categories {
+          grid-template-columns: repeat(4, 1fr);
+          /* Restore original grid for large screens */
+      }
+  }
+
+
+        @media (min-width: 2000px) {
+            .food-categories {
+                grid-template-columns: repeat(5, 1fr);
+                        margin-left: -65px;
+            }
+            
+        }
+
+
+
+        /* smaller display */
+                @media (min-width: 1400px) and (max-width: 1564px) {
+            .food-categories {
+                grid-template-columns: repeat(3, 1fr);
+        margin-left: 50px;            }
+        }
+
+                 @media (min-width: 100px) and (max-width: 1400px) {
+            .food-categories {
+                grid-template-columns: repeat(2, 1fr);
+        margin-left: 150px;         
+ }
+        }
+
+           @media (min-width: 100px) and (max-width: 1400px) {
+               .food-categories-body {
+                  width: 50%;
+                  margin-left: 140px;
+               }
+           }
+
+
+
+
+
+
+        /* aiuhsdiuheqdhiuqe */
+                /* Mobile-first approach */
+        

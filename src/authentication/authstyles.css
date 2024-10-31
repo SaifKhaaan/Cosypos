@@ -1,0 +1,184 @@
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: rgb(28, 28, 28);
+    font-family: 'Arial', sans-serif;
+} */
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.authcontainer{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+}
+.authcard {
+    background: rgb(44, 44, 44);
+    border-radius: 15px;
+    padding: 30px;
+    width: 400px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.authcard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.authcard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(135deg, #8e44ad, #c0392b);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    z-index: -1;
+}
+
+.authcard h2 {
+    color: #ecf0f1;
+    margin-bottom: 20px;
+}
+
+.authcard label {
+    color: #bdc3c7;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+
+.authcard input:focus {
+    border-bottom: 1px solid #3498db;
+    background-color: rgb(61, 61, 61);
+    outline: none;
+}
+
+.authcard input:invalid {
+    border-bottom: 1px solid #F4C1D8;
+}
+
+.authcard input:valid {
+    border-bottom: 1px solid #2ecc71;
+}
+
+.authcard a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.authcard a:hover {
+    text-decoration: underline;
+}
+
+.authcard button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(244, 193, 216);
+    color: #2c3e50;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.authcard button:hover {
+    background: #e6b8c1;
+    transform: scale(1.05);
+}
+
+.authcard .footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #bdc3c7;
+}
+
+.authcard form>div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.authcard .email-padding {
+    margin-top: 50px;
+}
+
+.authcard .name-padding {
+    padding-top: 30px;
+}
+
+.authcard .password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.authcard .password-container input {
+    flex: 1;
+}
+
+.authcard .password-container .toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #bdc3c7;
+}
+
+.authcard button.valid {
+    background: #2ecc71;
+}
+
+.password-container{
+    flex-direction: column;
+    text-align: left;
+    justify-content: left;
+    margin-left: 10px;
+}
+
+.authcard .password-container label {
+    margin-right: 260px;
+    width: 140px;
+    /* Add margin to create space between label and input */
+}
+
+
+.authcard .emaillabel{
+    margin-top: -30px;
+}
+.authcard .emaillabel input {
+    margin-top: -65px;
+}
+
+.authcard input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #bdc3c7;
+    background: rgb(51, 51, 51);
+    color: #ecf0f1;
+    border-radius: 5px;
+    transition: border-bottom 0.3s, background-color 0.3s;
+}
+
+
+
+.toggle-password{
+    top: 35px;
+}

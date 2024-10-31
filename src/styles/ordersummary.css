@@ -1,0 +1,123 @@
+.order-summary {
+    background-color: rgb(28, 28, 28);
+    color: #ffffff;
+    width: 340px;
+    /* min-height: 320px; */
+    border-radius: 10px 0 0 10px;
+    margin: 0;
+    /* position: absolute;
+        top: 0;
+        right: 0; */
+
+
+
+
+    margin: 20px;
+    text-align: left;
+    
+}
+
+.order-summary-container{
+    display: flex;
+        justify-content: right;
+        align-items: ;
+}
+
+.order-summary h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.order-summary p {
+    margin: 5px 0 20px;
+    color: #b0b0b0;
+}
+
+.order-summary .edit-icon {
+    float: right;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.order-item {
+    background-color: #2e2e2e;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, margin-left 0.3s ease, background-color 0.3s ease;
+    position: relative;
+}
+
+.order-item-container:hover {
+    .order-item{
+    margin-left: 10%;
+    background-color: rgba(255, 0, 0, 0.2);
+    }
+   
+}
+
+.order-item:hover .item-price {
+    display: none;
+}
+
+.order-item .item-info {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.order-item .item-info .item-number {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    position: relative;
+}
+
+.order-item .item-info .delete-icon {
+    position: absolute;
+    top: 0;
+    left: -45px;
+    background-color: rgb(60, 66, 65);
+    border-radius: 10%;
+    padding: 9px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff4d4d;
+    cursor: pointer;
+    display: none;
+    margin-top: -9px;
+}
+
+.order-item-container:hover .item-info .delete-icon {
+    display: flex;
+}
+
+.order-item .item-info .item-name {
+    font-size: 16px;
+}
+
+.order-item .item-info .item-quantity {
+    color: #b0b0b0;
+    margin-left: 5px;
+}
+
+.order-item .item-price {
+    font-size: 16px;
+}
+
+.item-number{
+font-size: smaller;
+
+}
