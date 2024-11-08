@@ -1,64 +1,10 @@
-import React, { useState } from 'react';
-import "../styles/Foodcategories.css"
+// Foodcategories.js
+import React from 'react';
+import "../styles/Foodcategories.css";
+import useStore from '../store/Mainstore';
 
-
-const categories = [
-  {
-    id: 1,
-    name: 'Breakfast',
-    icon: 'fa-coffee',
-    items: 13,
-  },
-  {
-    id: 2,
-    name: 'Soups',
-    icon: 'fa-utensil-spoon',
-    items: 8,
-  },
-  {
-    id: 3,
-    name: 'Pasta',
-    icon: 'fa-pizza-slice',
-    items: 10,
-  },
-  {
-    id: 4,
-    name: 'Sushi',
-    icon: 'fa-fish',
-    items: 15,
-  },
-  {
-    id: 5,
-    name: 'Main course',
-    icon: 'fa-drumstick-bite',
-    items: 7,
-  },
-  {
-    id: 6,
-    name: 'Desserts',
-    icon: 'fa-ice-cream',
-    items: 9,
-  },
-  {
-    id: 7,
-    name: 'Drinks',
-    icon: 'fa-coffee',
-    items: 11,
-  },
-  {
-    id: 8,
-    name: 'Alcohol',
-    icon: 'fa-wine-glass-alt',
-    items: 12,
-  },
-];
-
-function Foodcategories() {
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const handleInputChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
+function Foodcategories({ searchTerm, handleInputChange }) {
+  const categories = useStore((state) => state.categories);
 
   const filteredCategories = categories.filter((category) =>
     category.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -84,7 +30,7 @@ function Foodcategories() {
             </div>
             <div className="details">
               <div className="name">{category.name}</div>
-              <div className="items">{category.items} items</div>
+              <div className="items">{category.items.length} items</div>
             </div>
           </div>
         ))}

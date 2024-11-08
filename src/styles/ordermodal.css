@@ -1,0 +1,154 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    z-index: 1000;
+}
+
+.modal-container {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    padding: 20px;
+    /* Matches the padding of .container in subtotal */
+    border-radius: 10px;
+    min-width: 750px;
+    /* Matches width of .container in subtotal */
+    height: 400px;
+    height: auto;
+    /* Matches height of .container in subtotal */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Aligns content similarly */
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+        margin-top: 50px;
+}
+
+.modal-container:hover {
+    transform: scale(1.1);
+    /* Similar hover effect */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-summary,
+.modal-item,
+.modal-subtotal,
+.modal-tax,
+.modal-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    width: 48%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.modal-buttons button:hover {
+    transform: scale(1.05);
+    /* Slight hover effect for buttons */
+}
+
+/* Additional spacing for input fields */
+.modal-container label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.modal-container input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #3c3c3c;
+    color: #ffffff;
+}
+
+.order-id {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #ffffff;
+}
+
+.modal-summary{
+    flex-direction: column;
+        
+}
+.modal-summary-items{
+overflow-y: scroll;
+    max-height: 200px;
+    background-color: #444;
+    border-radius: 5px;
+    padding: 20px;
+
+}
+
+.modal-subtotal{
+        margin-top: 50px;
+}
+
+
+.modal-overlay input{
+ width: 300px;
+}
+
+.modal-name-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 50px;
+
+}
+.modal-name-order-wrapper label{
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.order-id label{
+    margin-top: 40px;
+}
+
+.modal-overlay span{
+    margin-right: 10px;
+}
+
+.modal-name-order-wrapper{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    align-items: center;
+   
+}
+
+.modal-total{
+    padding-top: 10px;
+}
+
+.modal-summary-items ::-webkit-scrollbar {
+}
+
+.modal-summary-items::-webkit-scrollbar-track {
+   
+    margin-right: 20px;
+    }

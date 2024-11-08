@@ -1,0 +1,79 @@
+.transactions {
+    padding: 20px;
+}
+
+.transactions h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Styling for the search bar */
+.transaction-search-bar {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 0 auto 20px auto;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #3c3c3c;
+    color: #ffffff;
+    font-size: 1em;
+}
+
+.transactions-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.transaction-card {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 300px;
+    max-width: 400px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.transaction-card:hover {
+    transform: scale(1.05);
+}
+
+.transaction-items {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 10px;
+    min-height: 100px;
+    height: auto;
+    overflow-y: auto;
+}
+
+.transaction-card p,
+.transaction-card ul {
+    margin: 10px 0;
+    font-size: 0.95em;
+}
+
+.transaction-items li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.transaction-card strong {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.padding-top{
+    padding-top: 20px;
+}
+
+.margin-top{
+    margin-top: 30px;
+}

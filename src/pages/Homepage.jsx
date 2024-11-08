@@ -9,12 +9,16 @@ import useUserStore from '../authentication/Authstore';
 import Login from '../authentication/Login';
 import { useState } from 'react';
 
-import { useNavigate } from 'react-router-dom';
 
 
 function Homepage() {
   const { user } = useUserStore();
-       const navigate = useNavigate();
+         const [searchTerm, setSearchTerm] = useState('');
+
+  const handleInputChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
 
 
   if (!user.loggedIn) {
@@ -31,8 +35,10 @@ function Homepage() {
 <Sidebar />
       </div>
       <div className="homepagecenter">
-        <Foodcategories />
-        <Countercard />
+        {/* Render the search bar in Foodcategories and pass down searchTerm and handleInputChange */}
+      <Foodcategories searchTerm={searchTerm} handleInputChange={handleInputChange} />
+      {/* Pass searchTerm as a prop to Countercard */}
+      <Countercard searchTerm={searchTerm} />
         <Status />
      
       </div>

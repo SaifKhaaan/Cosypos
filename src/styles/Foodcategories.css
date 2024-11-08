@@ -202,3 +202,109 @@ align-items: start;
         /* aiuhsdiuheqdhiuqe */
                 /* Mobile-first approach */
         
+
+
+.admincategories .food-category {
+
+height: 160px;
+width: 250px;
+
+
+}
+
+/* Shared styling class for input fields and dropdown */
+.shared-input-style {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Optional specific styling for dropdown only */
+.shared-dropdown-style {
+    appearance: none;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+
+.food-category.admin-add-category {
+    background-color: #2c2c2c;
+    /* Matching the subtotal container color */
+    padding: 20px;
+    border-radius: 10px;
+    /* width: 300px;
+    height: 400px; */
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #ffffff;
+    /* To ensure text color matches the subtotal card */
+    transition: transform 0.3s ease-in-out;
+}
+
+.food-category.admin-add-category:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button style to match the subtotal "Place Order" button */
+.food-category.admin-add-category button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.food-category.admin-add-category button:hover {
+    transform: scale(1.05);
+}
+
+/* Adjusting input and select elements to inherit styles from shared-input-style */
+.food-category.admin-add-category input,
+.food-category.admin-add-category select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    margin-bottom: 10px;
+    /* Add spacing between input elements */
+}
+
+
+.admincategories{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: -180px;
+}
+
+.food-category.admin-add-category{
+    height: 300px;
+    width: 300px;
+}
+.food-category.admin-add-category input{
+    width: 280px;
+}
+
+.admin-actions{
+    margin-left: 90px;
+}
+
+.admin-product-wrapper{
+    margin-top: 40px;
+    margin-left: 35px;
+}
+
+
+/* /// */

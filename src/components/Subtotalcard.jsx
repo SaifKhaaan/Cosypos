@@ -1,105 +1,95 @@
-import React from 'react'
+import React from 'react';
 import '../styles/subtotalcard.css';
-import useOrderStore from './store';
-// import  { useRef } from 'react';
-// import useReactToPrint from 'react-to-print';
-// import Invoice from './Invoice';
-// import Ordersummary from './Ordersummary'; // Import here
-// import  { useRef } from 'react';
-
+import useStore from '../store/Mainstore'; // Import the store
+import OrderModal from './OrderModal';
 
 const Subtotalcard = () => {
+  const { categories, toggleModal, addOrder,orderId } = useStore(); // Access categories from the store
 
-    // const contentRef = useRef(null);
-//  const handlePrint = useReactToPrint({
-//     content: () => contentRef.current,
-//   });
+ const calculateTotals = () => {
+  const filteredItems = categories.flatMap(category => 
+    category.items.filter(item => item.quantity > 0)
+  );
+ 
 
 
-  const { items } = useOrderStore();
-    const filteredItems = items.filter(item => item.quantity > 0);
-    
 
-const subtotal = (Number(filteredItems.reduce((acc, item) => acc + item.price * item.quantity, 0)));
-const tax = (Number(subtotal * 0.1));
-const total = (Number(tax.toFixed(2)) + Number(subtotal.toFixed(2))).toFixed(2);
+    const subtotal = filteredItems.reduce((acc, item) => acc + item.price * item.quantity, 0) || 0;
+  const tax = subtotal * 0.1 || 0;
+  const total = subtotal + tax || 0;
 
-// #write a function to add number
+  return { subtotal, tax, total: total.toFixed(2), filteredItems };
+};
+
+
+  const { subtotal, tax, total, filteredItems } = calculateTotals(); // Get totals
+
+ 
+ 
+
+const handlePlaceOrder = () => {
+  if (filteredItems.length > 0) {
+    const orderId = new Date().getTime();
+    addOrder({ id: orderId, items: filteredItems, subtotal: subtotal || 0, tax: tax || 0, total: total || 0  });
+    toggleModal();
+  } else {
+    alert("No items in order.");
+  }
+};
+
+
+
+  console.log("Filtered Items:", filteredItems);
+console.log("Subtotal:", subtotal, "Tax:", tax, "Total:", total);
 
 
   return (
     <div className='subtotal'>
-      <div class="container">
+      <div className="container">
         <div>
-            <div class="summary spacing">
-                <span>Subtotal</span>
-                <span>${subtotal.toFixed(2)}</span>
-            </div>
-            <div class="summary spacing">
-                <span>Tax 10%</span>
-                <span>${tax.toFixed(2)}</span>
-            </div>
-            <div class="divider spacing"></div>
-            <div class="total spacing">
-                <span>Total</span>
-                <span>${total}</span>
-            </div>
+          <div className="summary spacing">
+            <span>Subtotal</span>
+            <span>${subtotal.toFixed(2)}</span>
+          </div>
+          <div className="summary spacing">
+            <span>Tax 10%</span>
+            <span>${tax.toFixed(2)}</span>
+          </div>
+          <div className="divider spacing"></div>
+          <div className="total spacing">
+            <span>Total</span>
+            <span>${total}</span>
+          </div>
         </div>
         <div>
-            <div class="payment-method spacing">
-                <h3>Payment Method</h3>
-                <div class="payment-options">
-                    <div class="payment-option">
-                        <i class="fas fa-money-bill-wave"></i>
-                        <span>Cash</span>
-                    </div>
-                    <div class="payment-option">
-                        <i class="fas fa-credit-card"></i>
-                        <span>Debit Card</span>
-                    </div>
-                    <div class="payment-option">
-                        <i class="fas fa-qrcode"></i>
-                        <span>E-Wallet</span>
-                    </div>
-                </div>
+          <div className="payment-method spacing">
+            <h3>Payment Method</h3>
+            <div className="payment-options">
+              <div className="payment-option">
+                <i className="fas fa-money-bill-wave"></i>
+                <span>Cash</span>
+              </div>
+              <div className="payment-option">
+                <i className="fas fa-credit-card"></i>
+                <span>Debit Card</span>
+              </div>
+              <div className="payment-option">
+                <i className="fas fa-qrcode"></i>
+                <span>E-Wallet</span>
+              </div>
             </div>
-            <button class="place-order" >Place Order</button>
-
-{/* onClick={handlePrint}  */}
-
-
-
-
-    {/* <div className="invoice-container" ref={contentRef}>
-      <div className="invoice-header">
-        <h2>Your Company Name</h2>
-        <p>Address, Phone Number, Email</p>
-      </div>
-
-      <div className="invoice-details">
-        <h2>Customer Information</h2>
-        <p>Customer Name</p>
-        <p>Customer Address</p>
-      </div>
-
-      <div className="invoice-summary">
-        <h2>Order Summary</h2>
-        <Ordersummary />
-        <Subtotalcard contentRef={contentRef} />
-      </div>
-    </div> */}
-
-
-
-
-
-
+          </div>
+          <button className="place-order" 
+          onClick={handlePlaceOrder}
+          >Place Order</button>
         </div>
-    </div>
-    
-    
-    </div>
-  )
-}
+      </div>
+      <OrderModal subtotal={subtotal} tax={tax} total={total} items={filteredItems} orderId={new Date().getTime()} />
+       {/* Pass the orderId and items to the modal */}
+      {/* <OrderModal subtotal={subtotal} tax={tax} total={total} items={filteredItems} orderId={orderId} /> */}
 
-export default Subtotalcard
+    </div>
+  );
+};
+
+export default Subtotalcard;

@@ -201,3 +201,13 @@ text-align: left;}
         padding-bottom: 0;
         height: 70px;
     }
+
+
+    .admin-portal-container .sidebar{
+        z-index: 20;
+    }
+
+                .admin-portal-container .sidebar .logo {
+        margin-left: -40px;
+        margin-top: 20px;
+                }
