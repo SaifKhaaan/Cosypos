@@ -73,7 +73,96 @@ const useStore = create((set) => ({
         { id: 15, title: 'Red Wine', price: 8.50, quantity: 0 },
         { id: 16, title: 'Beer', price: 4.50, quantity: 0 },
       ],
-    },
+    }, {
+    id: 9,
+    name: 'Burgers',
+    icon: 'fa-hamburger',
+    items: [
+      { id: 17, title: 'Beef Burger', price: 6.50, quantity: 0 },
+      { id: 18, title: 'Chicken Burger', price: 6.00, quantity: 0 },
+    ],
+  },
+  {
+    id: 10,
+    name: 'Pizza',
+    icon: 'fa-pizza-slice',
+    items: [
+      { id: 19, title: 'Pepperoni Pizza', price: 9.00, quantity: 0 },
+      { id: 20, title: 'Veggie Pizza', price: 8.50, quantity: 0 },
+    ],
+  },
+  {
+    id: 11,
+    name: 'Salads',
+    icon: 'fa-leaf',
+    items: [
+      { id: 21, title: 'Caesar Salad', price: 5.50, quantity: 0 },
+      { id: 22, title: 'Greek Salad', price: 6.00, quantity: 0 },
+    ],
+  },
+  {
+    id: 12,
+    name: 'Tacos',
+    icon: 'fa-taco',
+    items: [
+      { id: 23, title: 'Beef Taco', price: 4.00, quantity: 0 },
+      { id: 24, title: 'Chicken Taco', price: 3.75, quantity: 0 },
+    ],
+  },
+  {
+    id: 13,
+    name: 'Appetizers',
+    icon: 'fa-utensils',
+    items: [
+      { id: 25, title: 'Spring Rolls', price: 4.25, quantity: 0 },
+      { id: 26, title: 'Mozzarella Sticks', price: 5.00, quantity: 0 },
+    ],
+  },
+  {
+    id: 14,
+    name: 'Smoothies',
+    icon: 'fa-blender',
+    items: [
+      { id: 27, title: 'Berry Blast', price: 4.50, quantity: 0 },
+      { id: 28, title: 'Mango Smoothie', price: 4.75, quantity: 0 },
+    ],
+  },
+  {
+    id: 15,
+    name: 'Grill',
+    icon: 'fa-fire',
+    items: [
+      { id: 29, title: 'Grilled Salmon', price: 12.00, quantity: 0 },
+      { id: 30, title: 'Grilled Vegetables', price: 7.00, quantity: 0 },
+    ],
+  },
+  {
+    id: 16,
+    name: 'Wraps',
+    icon: 'fa-bread-slice',
+    items: [
+      { id: 31, title: 'Chicken Wrap', price: 5.50, quantity: 0 },
+      { id: 32, title: 'Veggie Wrap', price: 5.00, quantity: 0 },
+    ],
+  },
+  {
+    id: 17,
+    name: 'Seafood',
+    icon: 'fa-fish',
+    items: [
+      { id: 33, title: 'Grilled Shrimp', price: 13.00, quantity: 0 },
+      { id: 34, title: 'Crab Cakes', price: 11.00, quantity: 0 },
+    ],
+  },
+  {
+    id: 18,
+    name: 'Ice Cream',
+    icon: 'fa-ice-cream',
+    items: [
+      { id: 35, title: 'Vanilla Scoop', price: 3.00, quantity: 0 },
+      { id: 36, title: 'Chocolate Sundae', price: 4.25, quantity: 0 },
+    ],
+  },
   ],
   orders: [],
 //   transactions: [], 

@@ -1,5 +1,9 @@
 .transactions {
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .transactions h2 {
@@ -77,3 +81,58 @@
 .margin-top{
     margin-top: 30px;
 }
+
+
+
+
+/* pagination */
+.pagination {
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    margin-top: 60px;
+    width :auto;
+}
+
+.pagination a,
+.pagination span {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.pagination a:hover,
+.pagination span:hover {
+    text-decoration: underline;
+}
+
+.pagination .current {
+    background-color: #5c6bc0;
+    color: white;
+    border-radius: 50%;
+    padding: 10px 15px;
+}
+
+.pagination .arrow {
+    font-size: 18px;
+}
+
+.pagination .arrow.disabled {
+    cursor: not-allowed;
+    color: #aaa;
+}
+
+.pagination .page-number {
+    cursor: pointer;
+}
+
+.pagination .page-number:hover {
+    text-decoration: underline;
+}
+
